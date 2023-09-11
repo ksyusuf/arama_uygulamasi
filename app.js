@@ -73,9 +73,8 @@ function resimleri_ekrana_yazdir(url){
     // bu ana divi biz bir değişkene almıştık. işlem yapabilmek için.
 
     // öncelikle ekranı bir temizleyelim
-    while (imageListWrapper.firstChild) {
-        imageListWrapper.removeChild(imageListWrapper.firstChild);
-    }
+    imageListWrapper.innerHTML="";
+    
     // ama ekran temizliğinden hgemen sonra görüntüler gelsin istiyorum    
     imageListWrapper.append(div);
 }
@@ -83,7 +82,5 @@ function resimleri_ekrana_yazdir(url){
 
 function clear(){
     searchInput.value = "";
-    while (imageListWrapper.firstChild) {
-        imageListWrapper.removeChild(imageListWrapper.firstChild);
-    }
+    imageListWrapper.innerHTML="";
 }
